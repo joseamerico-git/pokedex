@@ -179,7 +179,14 @@ Ferramentas VsCode --> Node.js --> http-server
 
 #################################################################
 
+# O que é CDN para que serve? 
+É uma rede de distribuição de conteúdo
+Um grupo de servidores que disponibilizam conteúdos de internet com rapidez e segurança.
 
+# O que significa
+Das ferramentas
+- versão beta -> Uma versão de testes -> sujeito a falhas
+- versão lts das ferramentas -> suporte de longo tempo
 
 
 
