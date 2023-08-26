@@ -92,6 +92,29 @@ criar as pastas js e css
 dentro de css criar o arquivo global.css
 criar main.js e um console.log para teste.
 
+Podemos pegar [fonts](https://fonts.google.com/) no google, no caso roboto
+
+# Aplicando uma técnica chamada Mobile First 
+# idéia fazer primerio o estilo pensando em mobile
+# de css mobile e para as telas posteriores incrementar css
+
+No devTools do navegador temos aba mobile.
+
+criamos uma session dentro do body e em seguida uma session
+criamos uma classe para content para a session
+
+```
+    <session class="content">
+    
+    </session>
+
+    e no global.css
+
+    .content{
+        padding:1rm; //não utilizamos pixels, pois o rem que é baseado no tamanho da fonte m (maior)
+    }
+
+```
 
 
 
