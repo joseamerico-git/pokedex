@@ -115,23 +115,69 @@ criamos uma classe para content para a session
     }
 
 ```
-# Adicionando imagens aos pokedex
+### Adicionando imagens aos pokedex
 
-    Organização é a crucial para manter e evoluir a aplicação.
+Organização é a crucial para manter e evoluir a aplicação.
+ A propriedade css box-sizing:border-box; //considrar o tamanho total
 
-    A propriedade css box-sizing:border-box; //considrar o tamanho total
-
-    [Color Picke - Pegar cores da tela](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
+[Color Picke - Pegar cores da tela](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
 
 
-    [Calcular tamanho de fontes e rem](https://nekocalc.com/px-to-rem-converter)
+[Calcular tamanho de fontes e rem](https://nekocalc.com/px-to-rem-converter)
+
+   
 
 ## Após a estilização prencher a lista dinamicamente com JavaScript
+#Tornando Nosso Layout Responsivo
+Aplicando meedia query css
+nosso content
+
+# Melhorando os nossos estilos antes global.css 
+
+Criamos então um arquivo pokedex.css
+
+As partes que erma dos poquemons retiramos do arquivo global.css
+e colocamos no pokedex.css
+
+## As partes de meedia query --> Geralmente no dia a usa-se um pré processador de css um SAZ pra fazer e o código fica enxuto.
+
+Por convensão os arquivos media query ficam no final do arquivo
+
+##################################################################
+
+# Resumão para avaliação:
+
+# HTML HyperText Markup Language
+
+# HTTP (Hyper Text Transport Protcolo) é uma forma de comunicação entre máquinas na internet.
+
+# Por interédio de um servidor HTTP os clientes fazem requisição e recebem respostas
+
+Clinte-->servidor-->processamento-->reposta_to_cliente
+
+Para desenvolver o projeto 
+
+npm install -g http-server
+
+Ferramentas VsCode --> Node.js --> http-server
+
+# Para rodar o http-server 
 
 ```
-
+    //No terminal
+    http-server ./
 ```
+ # Normalize.css padroniza os estilos
+ # JavaScript é o que da interatividade, comportamentos e ações para as páginas
 
+ Com JScript podemos inserir html, css dinâmicamente.
+
+ window   --> um objeto que representa nosso brownser (para manipulação)
+ document --> representa o documento corrente
+
+
+
+#################################################################
 
 
 
