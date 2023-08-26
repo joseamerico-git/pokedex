@@ -77,7 +77,7 @@ Quando utilizamos react e alguns frameworks estamos trabalhando com essa tread H
 
 Podem ocorrer diferenças entre estilos dependendo do brownser
 
-# Normalize padronizar os estilos nos navegadores, pois eles possuem esquemas de estilização distintas
+# Normalize padronizar os css(s) estilos nos navegadores, já que os diversos navegadores possuem esquemas de estilização distintas
 
 [Normalize.css](https://necolas.github.io/normalize.css/) 
 [CDN](https://necolas.github.io/normalize.css/) 
@@ -115,8 +115,22 @@ criamos uma classe para content para a session
     }
 
 ```
+# Adicionando imagens aos pokedex
+
+    Organização é a crucial para manter e evoluir a aplicação.
+
+    A propriedade css box-sizing:border-box; //considrar o tamanho total
+
+    [Color Picke - Pegar cores da tela](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
 
 
+    [Calcular tamanho de fontes e rem](https://nekocalc.com/px-to-rem-converter)
+
+## Após a estilização prencher a lista dinamicamente com JavaScript
+
+```
+
+```
 
 
 
