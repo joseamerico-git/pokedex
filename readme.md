@@ -185,8 +185,218 @@ Um grupo de servidores que disponibilizam conteúdos de internet com rapidez e s
 
 # O que significa
 Das ferramentas
-- versão beta -> Uma versão de testes -> sujeito a falhas
+- versão beta -> Uma versão de testes -> sujeito a falhasdo
 - versão lts das ferramentas -> suporte de longo tempo
+
+
+## Dominando o Protocolo HTTP
+
+Integrando a nossa aplicação pokedex com a api 
+
+O que uma api?
+ É um servidor que nos serve dados não deixa de ser um web-server
+
+Enquanto o html traz semantica
+O css estiliza nossas informações 
+
+# Já na api(s) trazem infomações JSON etc...
+
+# Requisições HTTP(cliente -> servidor -> processa -> resposta)
+
+Entender quais as sessões de dados para fazer as requisições http
+
+# Quais são as áres das sessões http
+
+ URL:path
+ URL -> é composta de ip + path ->caminho de identificação do recurso
+ IP  -> É Convertido por um servidor DNS que resolve(converte) os nomes dos domínios
+ IP : http://dominio:porta/path
+
+ # Existem vários tipos de solicitação para um servidor
+
+ # Request Method: GET | POST | PUT | DELETE | PATH ...
+
+ GET pega um recurso de uma url
+
+ POS insere um novo item no recurso
+
+ PUT atualiza o recurso passando parametros
+
+ DELETE deleta um recurso passando um id
+
+ PATH 
+
+ https://pokeapi.co/api/v2/pokemon/1
+  
+ Filtros 
+ GET -> query string 
+ utiliza ponto de interrogação depois do recurso ? seguido da chave = valor
+ 
+ https://pokeapi.co/api/v2/pokemon??offset=2&limit=3 //paginar os registros 
+
+ ## Entendendo área de dados
+-Request  headers -> metadados da nossa requisição
+
+# Headers --> Navegador eu aceito os tipos de dados descritos neste header
+# Pode ocorrer que nem sempre o servidor vai responder conforme o solicitado no header
+text/html
+application/xhtml+xml
+application/xml;q=0.9
+image/avif
+image/webp
+image/apng
+*/*;q=0.8
+application/signed=exchange;v=b3;q=0.0
+
+# Credenciais são essencial para identificar em um header
+
+Dependendo do metodo que estamos utilizando temos o body
+
+O metodo GET não tem body na requisição, pois estamos consultando não vamos inserir nada
+
+Já no metodo POST faz sentido, pois queremos inserir ou alterar informações
+
+# Body        -> corpo da requisição onde passamos os dados 
+
+```
+Request Headers
+    content-type: application/json;
+Body{
+    "name":"Teste"
+}
+```
+
+# Status code -> numero retornado pelo servidor que diz o que aconteceu com nossa requisição
+
+ - status 200 ok
+ - status 201 created
+ - status 400 erro bad request
+ - status 500 erro no servidor
+
+
+# Uma requisição HTTP é composta de:
+
+- URL 
+- Request method
+- Request Headers
+- Request Body
+
+#  Resposta do servidor pode ou não ter um body 
+## Exemplo status-code 201 created
+
+- Status code 
+- Response Headers -> diz como esta resposta está configurada
+- Response body -> resposta em si 
+
+## Integração do POKEDEX com a poke api
+
+Existem várias formas de fazer requisição com js
+utilizaremos o fech Api, já que estão presentes nos navegadores
+
+# Importante 
+
+Quando fazemos uma requisição ela demora x tempo para ser concluida
+requisição passa pela rede etc... esse processamento é o que chama-se processamento assincrono as respostas não são imediatas.
+
+Trata-se de uma promessa de uma resposta
+
+
+fetch(url,) //fetch retorna uma promisse 
+
+# Promisses são interfaces que controlam a interpretação da resposta e dar um destino a elas
+
+# Tratando o resultado de uma Promisse
+
+```
+    /* fetch retorna uma promisse
+    funcao de calback
+    metodo then() suecesso
+    metodo catch() fracasso
+    finaly() //requisição concluida independente do sucesso ou fracasso
+    */
+
+  
+    fetch(url).then(function (response) {
+        console.log(response)
+    }).catch(function (error) {
+
+    }).finally(function () {
+        console.log("Requisição concluida")
+    })
+```
+
+# Precisamos converter o resultado Promisse em JSON
+# Evitar calback dentro de calback para evitar complexidade
+
+
+## Conceito de Promiss
+
+- Quando chamamaos um then() de uma Promisse podemos encadear vários then()(s) em sequência
+```
+
+    fech(url).then(function(response){
+        return respones.json();
+    }).then(function(jsonBody){
+        console.log(jsonBody);
+    }).catch(function (error) {
+
+    }).finally(function () {
+        console.log("Requisição concluida")
+    })
+
+```
+## Utilizando Arrow functions para enxugar o código e diminuir complexidade
+
+```
+
+     fetch(url)
+    .then((response)=>response.json())
+    .then((jsonBody)=>console.log(jsonBody))
+    .catch((error)=> console.log(error))
+
+
+```
+
+## Utilizando o debugger
+
+```
+    fetch(url)
+    .then((response)=>response.json())
+    .then((jsonBody)=>{
+        debugger  //debugar nossas aplicações 
+        console.log(jsonBody)
+    })
+    .catch((error)=> console.log(error))
+
+```
+ 
+## Transformando nossa lista de pokémon em lista html
+
+
+## Fazer uma funçao que adiciona os itens da lista em nosso html
+
+## Revisão Parte da transformação de listas em elementos html
+
+O código ficou misturado 
+Separando códigos de html dos códigos de consumo da api criamos um arquivo poke-api.js
+
+Nota: Para funcionar esse script do objeto é necessário importa-lo no index.html antes do import do main.js, pois no momento em que for processado o objeto pokeApi deverá estar criado.
+
+
+Fazer uma requisição para cada detalhe do pokemon várias promisses
+types grass poison
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
