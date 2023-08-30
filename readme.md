@@ -386,7 +386,7 @@ Nota: Para funcionar esse script do objeto é necessário importa-lo no index.ht
 Fazer uma requisição para cada detalhe do pokemon várias promisses
 types grass poison
 
-
+## Melhorando o estilo dinamicamente se for do type fire ou do tipo wather 
 
 
 
